@@ -1,3 +1,6 @@
+## Please Note ##
+This is a fork of [the original project] with the server stuff removed so I can use it as a client in a unity3d project. If you need the full package for any reason please visit sta's repository.
+
 <!-- # websocket-sharp # -->
 ![Logo](websocket-sharp.png)
 
@@ -391,7 +394,7 @@ Copyright &copy; 2010 - 2013 sta.blockhead
 
 Licensed under the **[MIT License]**.
 
-
+[the original project]: https://github.com/sta/websocket-sharp
 [Audio Data delivery server]: http://agektmr.node-ninja.com:3000/
 [branch: draft75]: https://github.com/sta/websocket-sharp/tree/draft75
 [branch: hybi-00]: https://github.com/sta/websocket-sharp/tree/hybi-00

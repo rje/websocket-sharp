@@ -109,7 +109,7 @@ namespace WebSocketSharp {
     #endregion
 
     #region Internal Constructors
-        /*
+#if !CLIENT_ONLY
     internal WebSocket(HttpListenerWebSocketContext context)
       : this()
     {
@@ -125,7 +125,7 @@ namespace WebSocketSharp {
       _closeContext = () => context.Close();
       init(context);
     }
-*/
+#endif
     #endregion
 
     #region Public Constructors

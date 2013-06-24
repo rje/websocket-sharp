@@ -28,7 +28,9 @@
 
 using System;
 using System.Collections.Generic;
-//using System.Configuration;
+#if !CLIENT_ONLY
+using System.Configuration;
+#endif
 using System.IO;
 using System.Net.Sockets;
 using System.Security.Cryptography.X509Certificates;
@@ -139,7 +141,7 @@ namespace WebSocketSharp {
       return new WsStream(netStream);
     }
 
-    /*
+#if !CLIENT_ONLY
     internal static WsStream CreateServerStream(TcpClient tcpClient, bool secure)
     {
       var netStream = tcpClient.GetStream();
@@ -160,7 +162,7 @@ namespace WebSocketSharp {
       var conn = context.Connection;
       return new WsStream(conn.Stream, conn.IsSecure);
     }
-    */
+#endif
     #endregion
 
     #region Public Methods

@@ -518,7 +518,7 @@ namespace WebSocketSharp {
     #endregion
 
     #region Public Methods
-
+#if !CLIENT_ONLY
     /// <summary>
     /// Accepts a WebSocket connection by the <see cref="TcpListener"/>.
     /// </summary>
@@ -534,7 +534,6 @@ namespace WebSocketSharp {
     /// <exception cref="ArgumentNullException">
     /// <paramref name="listener"/> is <see langword="null"/>.
     /// </exception>
-        /*
     public static TcpListenerWebSocketContext AcceptWebSocket(this TcpListener listener, bool secure)
     {
       if (listener == null)
@@ -543,7 +542,6 @@ namespace WebSocketSharp {
       var client = listener.AcceptTcpClient();
       return new TcpListenerWebSocketContext(client, secure);
     }
-    */
 
     /// <summary>
     /// Accepts a WebSocket connection asynchronously by the <see cref="TcpListener"/>.
@@ -560,8 +558,7 @@ namespace WebSocketSharp {
     /// <exception cref="ArgumentNullException">
     /// <paramref name="listener"/> is <see langword="null"/>.
     /// </exception>
-    /*
-        public static void AcceptWebSocketAsync(this TcpListener listener, bool secure, Action<TcpListenerWebSocketContext> completed)
+   public static void AcceptWebSocketAsync(this TcpListener listener, bool secure, Action<TcpListenerWebSocketContext> completed)
     {
       if (listener == null)
         throw new ArgumentNullException("listener");
@@ -575,7 +572,7 @@ namespace WebSocketSharp {
 
       listener.BeginAcceptTcpClient(callback, null);
     }
-    */
+#endif
 
     /// <summary>
     /// Determines whether the specified <see cref="string"/> contains any of characters
@@ -1081,7 +1078,7 @@ namespace WebSocketSharp {
     /// <exception cref="ArgumentException">
     /// <paramref name="protocol"/> is <see cref="String.Empty"/>.
     /// </exception>
-/*
+#if !CLIENT_ONLY
     public static bool IsUpgradeTo(this HttpListenerRequest request, string protocol)
     {
       if (request == null)
@@ -1101,7 +1098,7 @@ namespace WebSocketSharp {
 
       return true;
     }
-*/
+#endif
     /// <summary>
     /// Determines whether the specified <see cref="string"/> is valid absolute path.
     /// </summary>
@@ -1685,7 +1682,7 @@ namespace WebSocketSharp {
     /// <exception cref="ArgumentNullException">
     /// Is thrown when the <paramref name="response"/> parameter passed to a method is invalid because it is <see langword="null"/>.
     /// </exception>
-        /*
+#if !CLIENT_ONLY
     public static void WriteContent(this HttpListenerResponse response, byte[] content)
     {
       if (response == null)
@@ -1699,7 +1696,7 @@ namespace WebSocketSharp {
       output.Write(content, 0, content.Length);
       output.Close();
     }
-*/
+#endif
     #endregion
   }
 }

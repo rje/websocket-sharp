@@ -18,7 +18,7 @@
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>bin\Debug</OutputPath>
-    <DefineConstants>DEBUG</DefineConstants>
+    <DefineConstants>DEBUG CLIENT_ONLY</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <ConsolePause>false</ConsolePause>
@@ -30,6 +30,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <ConsolePause>false</ConsolePause>
+    <DefineConstants>CLIENT_ONLY</DefineConstants>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug_Ubuntu|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -73,13 +74,10 @@
     <Compile Include="RequestHandshake.cs" />
     <Compile Include="ResponseHandshake.cs" />
     <Compile Include="Handshake.cs" />
-    <Compile Include="Net\ChunkStream.cs" />
     <Compile Include="Net\Cookie.cs" />
     <Compile Include="Net\CookieCollection.cs" />
     <Compile Include="Net\CookieException.cs" />
-    <Compile Include="Net\HttpStreamAsyncResult.cs" />
     <Compile Include="Net\HttpUtility.cs" />
-    <Compile Include="Net\RequestStream.cs" />
     <Compile Include="Net\WebHeaderCollection.cs" />
     <Compile Include="Net\HttpVersion.cs" />
     <Compile Include="Net\HttpStatusCode.cs" />
