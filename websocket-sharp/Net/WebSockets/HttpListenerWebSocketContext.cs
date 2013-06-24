@@ -49,14 +49,14 @@ namespace WebSocketSharp.Net.WebSockets {
     #endregion
 
     #region Internal Constructors
-
+        /*
     internal HttpListenerWebSocketContext(HttpListenerContext context)
     {
       _context   = context;
       _wsStream  = WsStream.CreateServerStream(context);
       _websocket = new WebSocket(this);
     }
-
+    */
     #endregion
 
     #region Internal Properties

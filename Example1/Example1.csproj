@@ -52,7 +52,6 @@
     <Reference Include="System" />
     <Reference Include="notify-sharp, Version=0.4.0.0, Culture=neutral, PublicKeyToken=2df29c54e245917a">
       <Private>False</Private>
-      <Package>notify-sharp</Package>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=3.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed">
       <Private>False</Private>

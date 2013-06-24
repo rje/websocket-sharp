@@ -40,5 +40,5 @@ namespace WebSocketSharp.Net {
 	/// <param name="httpRequest">
 	/// A <see cref="HttpListenerRequest"/> that contains a client request information.
 	/// </param>
-	public delegate AuthenticationSchemes AuthenticationSchemeSelector (HttpListenerRequest httpRequest);
+	//public delegate AuthenticationSchemes AuthenticationSchemeSelector (HttpListenerRequest httpRequest);
 }
